@@ -4,17 +4,23 @@
 # before the deploy step.  This script gets executed directly, so it
 # could be python, php, ruby, etc.
 
+rm -rf $OPENSHIFT_DATA_DIR/plugins
+rm -rf $OPENSHIFT_DATA_DIR/themes
+
 if [ ! -d $OPENSHIFT_DATA_DIR/uploads ]; then
     mkdir $OPENSHIFT_DATA_DIR/uploads
 fi
 
-if [ ! -d $OPENSHIFT_DATA_DIR/plugins ]; then
-    cp -r $OPENSHIFT_REPO_DIR/.openshift/plugins $OPENSHIFT_DATA_DIR/plugins
-fi
+ln -sf $OPENSHIFT_REPO_DIR/.openshift/plugins $OPENSHIFT_DATA_DIR/
+ln -sf $OPENSHIFT_REPO_DIR/.openshift/themes $OPENSHIFT_DATA_DIR/
 
-if [ ! -d $OPENSHIFT_DATA_DIR/themes ]; then
-    cp -r $OPENSHIFT_REPO_DIR/.openshift/themes $OPENSHIFT_DATA_DIR/themes
-fi
+# if [ ! -d $OPENSHIFT_DATA_DIR/plugins ]; then
+#     cp -r $OPENSHIFT_REPO_DIR/.openshift/plugins $OPENSHIFT_DATA_DIR/plugins
+# fi
+# 
+# if [ ! -d $OPENSHIFT_DATA_DIR/themes ]; then
+#     cp -r $OPENSHIFT_REPO_DIR/.openshift/themes $OPENSHIFT_DATA_DIR/themes
+# fi
 
 # Add multisite upload dir
 if [ ! -d $OPENSHIFT_DATA_DIR/blogs.dir ]; then
