@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>Bootstrap, from Twitter</title>
@@ -7,6 +5,7 @@
 
     <!-- Le styles -->
     <link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet">
+
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
