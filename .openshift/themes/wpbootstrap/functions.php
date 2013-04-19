@@ -9,11 +9,7 @@ function wpbootstrap_scripts_with_jquery()
 	wp_enqueue_script( 'custom-script' );
 	wp_enqueue_script( 'intro-js' );
 }
-# function wpbootstrap_scripts_with_intro()
-# {
-#   wp_register_script( 'intro-js2', get_template_directory_uri() . '/introjs/js/intro.js' );
-#   wp_enqueue_script( 'intro-js2' );
-# }
+
 add_action( 'wp_enqueue_scripts', 'wpbootstrap_scripts_with_jquery' );
 
 if ( function_exists('register_sidebar') )
@@ -23,4 +19,15 @@ if ( function_exists('register_sidebar') )
 		'before_title' => '<h3>',
 		'after_title' => '</h3>',
 	));
+
+	register_sidebar(array(
+		'name' => 'Header',
+		'id'   => 'header',
+		'description'   => 'This is the widgetized header.',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>'
+	));
+
 ?>
