@@ -19,4 +19,5 @@ This simple theme was built using the example Bootstrap theme "Basic marketing s
 body { 
      padding-top: 60px; 
      padding-bottom: 40px; 
+     background-image: -webkit-linear-gradient(bottom, rgb(130,45,235) 17%, rgb(237,245,245) 59%);
 }
