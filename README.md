@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Wordpress on OpenShift
 ======================
 
@@ -46,3 +47,9 @@ Security Considerations
 Consult the WordPress documentation for best practices regarding securing your wordpress installation.  OpenShift 
 automatically generates unique secret keys for your deployment into wp-config.php, but you may feel more
 comfortable following the WordPress documentation directly.
+=======
+verysilenter
+============
+
+Extra Silenter
+>>>>>>> 85b822abe4838cb4de824da610519ec3a7f9a704
